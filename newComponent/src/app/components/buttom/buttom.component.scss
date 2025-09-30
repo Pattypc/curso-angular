@@ -7,6 +7,13 @@
    font-weight: bold;
    padding: 10px;
    border: none;
+   cursor: pointer;
+
+   position: relative;
+
+  &:not(.disabled):active {
+    top: 2px;
+  }
 
    &--white {
       background-color: white;
