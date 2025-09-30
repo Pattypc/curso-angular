@@ -6,16 +6,19 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './buttom.component.scss'
 })
 export class ButtomComponent {
-  @Input({ required: true }) buttonText: string = '';
-  @Input() buttonStyle: 'white' | 'purple' = 'white'
+  @Input({ required: true })
+   buttonText: string = '';
+  
+   @Input()
+   buttonStyle: 'white' | 'purple' = 'white'
 
-  @Output('clicked') butttonClickedEmitter = new EventEmitter<void>();
+   @Input()  
+   isDisabled: boolean = false;
+
+   @Output('clicked') butttonClickedEmitter = new EventEmitter<void>();
 
   onButtonClicked() {
     this.butttonClickedEmitter.emit();
     console.log('Button sum recived clicked!');
   }
-
-  @Input()  
-  isDisabled: boolean = false;
 }

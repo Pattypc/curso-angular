@@ -1,4 +1,14 @@
-<div class="card card--purple">
+<div class="card"
+    [class] = " {
+        'card--orange': cardStyle === 'orange' ? true : false,
+        'card--purple': cardStyle === 'purple' ? true : false,
+    }">
     <div class="card__plan card__item">Plano <b>{{ planType }}</b></div>
-    <div class="card__price card__item">R$ {{ planPrice }} / Mês</div>
+    <div class="card__price card__item">R$ {{ planPrice }},00 / Mês</div>
+
+    <app-buttom
+        [buttonText]="'Adquirir'"
+        [buttonStyle]="cardStyle === 'orange' ? 'white' : 'purple'"
+        (clicked)="onButtonClicked()"
+    ></app-buttom>
 </div>
