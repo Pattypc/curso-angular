@@ -29,4 +29,11 @@ export class AppComponent {
     console.log(event)
     this.name = event;
   }
+
+  isDivHidden: boolean = true;
+
+  handleClick() {
+    console.log("Clicou no botão")
+    this.isDivHidden = !this.isDivHidden;
+  }
 }

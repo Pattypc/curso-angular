@@ -23,3 +23,25 @@
     <h1>Nome digitado: {{ name }} </h1>
     
 <input type="text" [(ngModel)]="name"/>
+
+<div
+    style="background-color: #67b147;" 
+    *ngIf="isDivHidden, else redTemplate"
+    >Texto
+</div> 
+
+<ng-template #redTemplate>
+    <div style="background-color: red;">Texto vermelho</div>
+</ng-template>
+
+<ng-container *ngIf="isDivHidden; then divOrange; else divYellow"></ng-container>
+
+<ng-template #divOrange>
+    <div style="background-color: orange;">Texto Orange</div>
+</ng-template>
+
+<ng-template #divYellow>
+    <div style="background-color: yellow;">Texto yellow</div>
+</ng-template>
+
+<button (click)="handleClick()">Clique aqui</button>
