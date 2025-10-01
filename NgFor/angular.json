@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "diretiva-estrutural-ngFor:build:production"
+              "buildTarget": "diretiva-estrutural-ngFor:build:production"
             },
             "development": {
-              "browserTarget": "diretiva-estrutural-ngFor:build:development"
+              "buildTarget": "diretiva-estrutural-ngFor:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "diretiva-estrutural-ngFor:build"
+            "buildTarget": "diretiva-estrutural-ngFor:build"
           }
         },
         "test": {
